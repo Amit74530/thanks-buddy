@@ -1484,7 +1484,9 @@ section {
     margin: 0;
 }
 
-/* Benefits Sidebar */
+/* ===== BENEFITS SIDEBAR WITH MOBILE TOGGLE ===== */
+
+/* Benefits Sidebar - Default (Desktop) */
 .benefits-sidebar {
     display: flex;
     flex-direction: column;
@@ -1528,6 +1530,114 @@ section {
     line-height: 1.5;
 }
 
+/* Mobile Toggle Button - Hidden by default */
+.benefits-toggle {
+    display: none;
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    margin: 2rem auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefits-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+}
+
+.benefits-toggle:active {
+    transform: translateY(0);
+}
+
+.benefits-toggle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.benefits-toggle:hover::before {
+    left: 100%;
+}
+
+/* Mobile Styles */
+@media (max-width: 968px) {
+    /* Show toggle button on mobile */
+    .benefits-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Hide benefits sidebar by default on mobile */
+    .benefits-sidebar {
+        display: none;
+        animation: slideDown 0.3s ease-out;
+    }
+    
+    /* Show benefits when mobile-visible class is added */
+    .benefits-sidebar.mobile-visible {
+        display: flex !important;
+        margin-top: 1rem;
+    }
+    
+    /* Adjust benefit items for mobile */
+    .benefit-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    .benefit-icon {
+        font-size: 2.5rem;
+    }
+    
+    .benefit-content h4 {
+        font-size: 1.2rem;
+    }
+    
+    .benefit-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Desktop - No changes */
+@media (min-width: 969px) {
+    .benefits-sidebar {
+        display: flex !important;
+    }
+    
+    .benefits-toggle {
+        display: none !important;
+    }
+}
+
+/* Toggle animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* Success Modal */
 .modal {
     display: none;
@@ -1915,4 +2025,83 @@ footer {
     .gallery-item {
         height: 200px;
     }
+}
+
+/* ===== MISSING CSS VARIABLES ===== */
+:root {
+  /* Add these missing variables */
+  --text-light: #6B7280;
+  --primary-color: #047857;
+}
+
+/* ===== FLOATING LABELS FIX ===== */
+.input-container.focused .floating-label {
+  top: 0;
+  left: 1rem;
+  font-size: 0.8rem;
+  color: var(--primary-dark);
+  background: white;
+  padding: 0 0.5rem;
+}
+
+/* ===== MODAL STYLES ENHANCEMENT ===== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem;
+  border-radius: 24px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  transform: scale(0.7);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.modal.show .modal-content {
+  transform: scale(1);
+}
+
+/* ===== NAVIGATION FIXES ===== */
+@media (max-width: 768px) {
+  .nav-menu {
+    background: rgba(5, 25, 10, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+  }
+}
+
+/* ===== IMPACT STATS ICON FIXES ===== */
+.impact-icon img {
+  width: 60px !important;
+  height: 60px !important;
+  object-fit: contain;
+}
+
+/* ===== FORM VALIDATION STYLES ===== */
+.form-control:invalid {
+  border-color: #ff6b6b;
+}
+
+.form-control:valid {
+  border-color: var(--primary-light);
 }
