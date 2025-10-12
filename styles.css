@@ -253,105 +253,186 @@ section {
     }
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== HERO SECTION (Rainforest Revamp - Animated Gradient Text) ===== */
 .hero {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-    color: #f2fff0;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  color: #e9e9e9;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* Background video */
 .hero-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.8) contrast(1.05) saturate(1.1);
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.25));
-    z-index: 1;
+/* Overlay for balancing bright/dark areas */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 10%,
+    rgba(0, 0, 0, 0.35) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 1;
 }
 
+/* Hero Content */
 .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 850px;
-    padding: 2rem;
-    color: #eaf5ea;
-    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
+/* Hero Title */
 .hero-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.4rem, 6vw, 4rem);
-    line-height: 1.2;
-    font-weight: 700;
-    color: #31e731;
-    margin-bottom: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
 }
 
-.highlight {
-    background: linear-gradient(90deg, #eef4eb, #78ffd6);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgba(120, 255, 214, 0.25);
+/* === Updated Gradient for "Planting Hope" - Static with Reduced Intensity === */
+.hero-title .hero-green {
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark) 0%,
+    var(--primary-light) 50%,
+    rgba(110, 231, 183, 0.6) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 15px rgba(168, 255, 180, 0.4),
+               0 0 30px rgba(46, 125, 50, 0.2);
 }
 
+/* "One Packet at a Time" remains in visible white-green */
+.hero-title .hero-white {
+  color: #eaffea;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Description */
 .hero-description {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    color: #dcf5e1;
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    line-height: 1.6;
-    text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  color: #eaffea;
+  max-width: 600px;
+  line-height: 1.7;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
 }
 
+/* Divider Line */
 .divider {
-    width: 140px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #a8ff78, transparent);
-    margin: 2rem auto;
-    opacity: 0.8;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #9ef79e, transparent);
+  margin: 1.5rem auto 2rem;
+  opacity: 0.8;
 }
 
+/* Glass Button */
 .btn-glass {
-    display: inline-block;
-    padding: 0.9rem 2rem;
-    border-radius: 50px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #F5FFF4;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #eaffea;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 1rem 2.2rem;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
 }
 
 .btn-glass:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: #B7F774;
-    transform: scale(1.05);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.25);
+  color: #b5ffb7;
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Mobile Responsiveness ===== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .btn-glass {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .divider {
+    width: 100px;
+  }
+}
+
+
+
+
+
 
 /* ===== OUR STORY SECTION ===== */
 #our-story {
@@ -1212,10 +1293,12 @@ section {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     max-width: 400px;
+    justify-items: center; /* Added this line to center the impact boxes */
   }
   
   .impact-card {
     padding: 2.5rem 1.5rem;
+    width: 100%; /* Added this line to ensure proper centering */
   }
   
   .impact-number {
