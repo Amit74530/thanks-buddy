@@ -273,3 +273,30 @@ document.addEventListener('DOMContentLoaded', function() {
     initBenefitsToggle();
     // ... your other existing code
 });
+
+
+/* ===== NAVBAR SCROLL HIDE FUNCTIONALITY ===== */
+let lastScrollY = window.scrollY;
+const navbar = document.querySelector('.navbar');
+
+if (navbar) {
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY > 100) {
+            // Hide navbar when scrolling down
+            if (currentScrollY > lastScrollY) {
+                navbar.classList.add('hidden');
+            } 
+            // Show navbar when scrolling up
+            else {
+                navbar.classList.remove('hidden');
+            }
+        } else {
+            // At top of page - always show navbar
+            navbar.classList.remove('hidden');
+        }
+        
+        lastScrollY = currentScrollY;
+    });
+}
