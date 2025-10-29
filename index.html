@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -25,7 +27,15 @@
 <nav class="navbar">
   <div class="nav-container">
     <!-- Logo -->
-    <div class="logo">Thanks Buddy!</div>
+    <div class="logo">
+  <span>Thanks Buddy!</span>
+  <div class="bird-container">
+    <div class="bird"></div>
+    <div class="bird"></div>
+    <div class="bird"></div>
+  </div>
+</div>
+
 
     <!-- Desktop Navigation -->
     <ul class="nav-menu">
@@ -368,45 +378,57 @@
 
 
 
-<!-- Footer -->
-<footer>
-    <div class="footer-content">
-        <!-- Brand & Contact -->
-        <div class="footer-brand">
-            <div class="footer-logo">Thanks Buddy!</div>
-            <p class="brand-tagline">Making compassion affordable and easy for all</p>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
-                            <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <a href="mailto: infothanksbuddy@gmail.com" class="contact-link">
-                        infothanksbuddy@gmail.com
-                    </a>
-                </div>
-            </div>
-        </div>
+<footer class="footer glass">
+  <div class="footer-container">
 
-        <!-- Navigation Links -->
-        <nav class="footer-nav">
-            <ul class="footer-links">
-                <li><a href="#Home" class="footer-link">Home</a></li>
-                <li><a href="#seed-packets" class="footer-link">Seed Packets</a></li>
-                <li><a href="#About-Us" class="footer-link">About us</a></li>
-                <li><a href="#join-movement" class="footer-link">Join Us</a></li>
-            </ul>
-        </nav>
+    <!-- Brand + Social -->
+    <div class="footer-brand">
+      <div class="footer-logo">
+  <span>Thanks Buddy!</span>
+  <div class="bird-container">
+    <div class="bird"></div>
+    <div class="bird"></div>
+    <div class="bird"></div>
+  </div>
+</div>
+
+      <p class="brand-tagline">Making compassion affordable and easy for all 🌱</p>
+
+      <div class="social-links">
+        <a href="https://instagram.com/" target="_blank" aria-label="Instagram" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn" class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://youtube.com/" target="_blank" aria-label="YouTube" class="social-icon">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="mailto:infothanksbuddy@gmail.com" aria-label="Email" class="social-icon">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
     </div>
 
-    <!-- Copyright -->
-    <div class="footer-bottom">
-        <p class="copyright">© 2025 Thanks Buddy! All rights reserved.</p>
+    <!-- Footer Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#seed-packets">Seed Packets</a></li>
+        <li><a href="#what-we-stand-for">About Us</a></li>
+        <li><a href="#join-movement">Join Us</a></li>
+      </ul>
     </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Thanks Buddy! All rights reserved.</p>
+  </div>
 </footer>
+
+
 
     <script src="script.js"></script>
     <script type="module" src="firebase.js"></script>
