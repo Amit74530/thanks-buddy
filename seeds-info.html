@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's Inside the Packet? | Thanks Buddy 🌱</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Lottie (for packet animation) -->
+    <!-- Replace src in <lottie-player> below with your actual Lottie JSON URL -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="seeds-info.css">
+</head>
+
+<body>
+
+    <!-- HEADER / HERO -->
+    <header class="info-header glass reveal">
+        <!-- Floating seed icons -->
+        <div class="floating-seeds">
+            <span class="seed-icon seed-1">🌱</span>
+            <span class="seed-icon seed-2">🌿</span>
+            <span class="seed-icon seed-3">🍃</span>
+        </div>
+
+        <h1>🌱 What’s Inside the Packet?</h1>
+        <p>Discover the science, seeds, and impact hidden in our tiny 2×2 inch packet.</p>
+
+        <!-- Lottie: Packet Opening Animation -->
+        <div class="packet-anim">
+            <!-- Replace src with your actual Lottie JSON URL -->
+            <lottie-player
+                src="https://lottie.host/38bfb0f4-f667-4c89-9c14-658a515867f3/Yp2cN6Kr1e.json
+"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay>
+            </lottie-player>
+        </div>
+    </header>
+
+    <section class="info-section">
+
+        <!-- Seed Composition -->
+        <div class="info-card glass fade-in reveal">
+            <h2>🌾 Seed Composition</h2>
+            <p>Your seed packet includes a curated mix of seeds selected for growth speed, survival and environmental benefit.</p>
+            
+            <!-- Seed Selector / Filters -->
+            <div class="seed-filters">
+                <button class="seed-filter-btn active" data-filter="all">All</button>
+                <button class="seed-filter-btn" data-filter="tree">Trees</button>
+                <button class="seed-filter-btn" data-filter="flower">Flowers</button>
+                <button class="seed-filter-btn" data-filter="grass">Ground Cover</button>
+            </div>
+
+            <!-- Seed Cards -->
+            <div class="seed-grid reveal">
+                <div class="seed-box glass tilt-card" data-type="tree">
+                    <img src="seed-images/neem.webp" alt="Neem">
+                    <h4>Neem</h4>
+                    <p>Medicinal & air-purifying, grows fast.</p>
+                </div>
+
+                <div class="seed-box glass tilt-card" data-type="tree">
+                    <img src="seed-images/peepal.webp" alt="Peepal">
+                    <h4>Peepal</h4>
+                    <p>Oxygen powerhouse, sacred & adaptive.</p>
+                </div>
+
+                <div class="seed-box glass tilt-card" data-type="flower">
+                    <img src="seed-images/wildflower.webp" alt="Wildflowers">
+                    <h4>Wildflowers</h4>
+                    <p>Supports bees & butterflies.</p>
+                </div>
+
+                <div class="seed-box glass tilt-card" data-type="grass">
+                    <img src="seed-images/grass.webp" alt="Grass">
+                    <h4>Eco Grass</h4>
+                    <p>Prevents soil erosion, grows fast.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why These Seeds -->
+        <div class="info-card glass fade-in reveal">
+            <h2>🌍 Why These Seeds?</h2>
+            
+            <div class="why-grid reveal">
+                <div class="why-box glass tilt-card">
+                    <i class="fas fa-cloud-rain"></i>
+                    <h4>Rain-Grown</h4>
+                    <p>Needs no watering.</p>
+                </div>
+
+                <div class="why-box glass tilt-card">
+                    <i class="fas fa-seedling"></i>
+                    <h4>High Germination</h4>
+                    <p>Optimized for Indian climate.</p>
+                </div>
+
+                <div class="why-box glass tilt-card">
+                    <i class="fas fa-dove"></i>
+                    <h4>Animal Safe</h4>
+                    <p>100% natural, chemical-free.</p>
+                </div>
+
+                <div class="why-box glass tilt-card">
+                    <i class="fas fa-leaf"></i>
+                    <h4>Eco-Friendly</h4>
+                    <p>Restores biodiversity.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Growth Timeline -->
+        <div class="info-card glass fade-in reveal">
+            <h2>⏳ Growth Timeline</h2>
+
+            <div class="timeline-grid reveal">
+                <div class="time glass tilt-card active"
+                     data-title="Week 1–2: Awakening"
+                     data-detail="Under the soil, seeds absorb moisture and slowly wake up. Roots begin to form and search for stability.">
+                    <h3>Week 1–2</h3>
+                    <p>Seed activates underground.</p>
+                </div>
+
+                <div class="time glass tilt-card"
+                     data-title="Week 3–6: First Signs of Life"
+                     data-detail="Tiny shoots break through the soil, leaves unfold, and the plant starts photosynthesizing light into energy.">
+                    <h3>Week 3–6</h3>
+                    <p>Leaves appear & root system grows.</p>
+                </div>
+
+                <div class="time glass tilt-card"
+                     data-title="Month 2–6: Rapid Growth"
+                     data-detail="The plant builds height, branches and a stronger root system, becoming more independent and resilient.">
+                    <h3>Month 2–6</h3>
+                    <p>Rapid growth & stabilization.</p>
+                </div>
+
+                <div class="time glass tilt-card"
+                     data-title="6 Months+: Young Tree / Plant"
+                     data-detail="Now a young, established plant, it contributes shade, oxygen, and habitat to the ecosystem.">
+                    <h3>6 Months+</h3>
+                    <p>Young growing plant.</p>
+                </div>
+            </div>
+
+            <!-- Interactive Timeline Detail -->
+            <div class="growth-detail glass">
+                <h3 id="growth-title">Week 1–2: Awakening</h3>
+                <p id="growth-text">
+                    Under the soil, seeds absorb moisture and slowly wake up. Roots begin to form and search for stability.
+                </p>
+            </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="info-card glass fade-in reveal">
+            <h2>📊 Seed Packet vs Traditional Planting</h2>
+
+            <table class="compare-table reveal">
+                <tr>
+                    <th>Feature</th>
+                    <th>Thanks Buddy Seeds</th>
+                    <th>Traditional Planting</th>
+                </tr>
+                <tr>
+                    <td>Cost</td>
+                    <td>Very Low</td>
+                    <td>Medium–High</td>
+                </tr>
+                <tr>
+                    <td>Maintenance</td>
+                    <td>Zero</td>
+                    <td>High</td>
+                </tr>
+                <tr>
+                    <td>Skill Needed</td>
+                    <td>None</td>
+                    <td>Gardening Knowledge</td>
+                </tr>
+                <tr>
+                    <td>Growth Speed</td>
+                    <td>Fast</td>
+                    <td>Varies</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- FAQ -->
+        <div class="info-card glass fade-in reveal">
+            <h2>❓ FAQs</h2>
+
+            <div class="faq reveal">
+                <div class="faq-item open">
+                    <h3>Do I need to water the seeds?</h3>
+                    <p>No. They grow naturally with rain.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Is it safe for animals?</h3>
+                    <p>Yes. 100% natural and chemical-free.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Where should I toss the seeds?</h3>
+                    <p>Any open soil: roadside, empty plots, parks, trails.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do they harm the environment?</h3>
+                    <p>No. These are native eco-safe species.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta glass fade-in reveal">
+            <h2>Ready to Make an Impact?</h2>
+            <p>Carry a packet. Toss a seed. Grow a forest.</p>
+            <a href="index.html#join-movement" class="cta-btn">Join the Movement 🌱</a>
+        </div>
+
+        <!-- Back Button -->
+        <a href="index.html" class="back-btn">← Back to Home</a>
+
+    </section>
+
+<!-- ================= JS: Animations & Interactions ================= -->
+<script>
+// ===== Floating Leaves =====
+for (let i = 0; i < 12; i++) {
+    const leaf = document.createElement("div");
+    leaf.classList.add("leaf");
+    leaf.style.left = Math.random() * 100 + "vw";
+    leaf.style.animationDuration = (Math.random() * 5 + 5) + "s";
+    leaf.style.animationDelay = Math.random() * 5 + "s";
+    document.body.appendChild(leaf);
+}
+
+// Elements for parallax
+const packetAnim = document.querySelector(".packet-anim");
+const floatingSeeds = document.querySelector(".floating-seeds");
+
+// ===== Scroll Reveal + Parallax Header =====
+const revealElements = document.querySelectorAll(".fade-in, .reveal");
+
+function revealOnScroll() {
+    revealElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 80) {
+            el.classList.add("visible");
+        }
+    });
+}
+
+function handleScroll() {
+    revealOnScroll();
+
+    const scrollY = window.scrollY || window.pageYOffset;
+
+    // Parallax-ish movement
+    if (packetAnim) {
+        packetAnim.style.transform = `translateY(${scrollY * 0.08}px)`;
+    }
+    if (floatingSeeds) {
+        floatingSeeds.style.transform = `translateY(${scrollY * 0.04}px)`;
+    }
+}
+
+window.addEventListener("scroll", handleScroll);
+handleScroll();
+
+// ===== FAQ Accordion =====
+document.querySelectorAll(".faq-item h3").forEach(header => {
+    header.addEventListener("click", () => {
+        const item = header.parentElement;
+        item.classList.toggle("open");
+    });
+});
+
+// ===== Interactive Growth Timeline =====
+const timeCards = document.querySelectorAll(".time");
+const growthTitle = document.getElementById("growth-title");
+const growthText = document.getElementById("growth-text");
+
+timeCards.forEach(card => {
+    card.addEventListener("click", () => {
+        timeCards.forEach(c => c.classList.remove("active"));
+        card.classList.add("active");
+
+        if (growthTitle && growthText) {
+            const title = card.dataset.title || card.querySelector("h3")?.textContent || "";
+            const detail = card.dataset.detail || card.querySelector("p")?.textContent || "";
+            growthTitle.textContent = title;
+            growthText.textContent = detail;
+        }
+    });
+});
+
+// ===== Seed Selector (Filter) =====
+const filterBtns = document.querySelectorAll(".seed-filter-btn");
+const seedBoxes = document.querySelectorAll(".seed-box");
+
+filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        filterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter;
+
+        seedBoxes.forEach(box => {
+            const type = box.dataset.type;
+            if (filter === "all" || type === filter) {
+                box.style.display = "block";
+            } else {
+                box.style.display = "none";
+            }
+        });
+    });
+});
+
+// ===== 3D Tilt Cards (Desktop Only) =====
+function initTilt() {
+    const tiltCards = document.querySelectorAll(".tilt-card");
+    tiltCards.forEach(card => {
+        card.addEventListener("mousemove", (e) => {
+            if (window.innerWidth < 768) return; // disable on mobile
+
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * -6;
+            const rotateY = ((x - centerX) / centerX) * 6;
+
+            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.style.transform = "";
+        });
+    });
+}
+
+initTilt();
+window.addEventListener("resize", initTilt);
+</script>
+
+</body>
+</html>
